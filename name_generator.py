@@ -3,17 +3,17 @@ import csv
 import random
 import argparse
 
+
 class WeightedName:
     def __init__(self, name, weight):
         self.name = name
         self.weight = float(weight)
 
+
 class NameCollection:
     def __init__(self, names):
         self.names = names
-        self.count = len(names)
         self.sum_weights = sum((name.weight for name in names))
-
     
     def choose(self):
         """Chooses a name from the collection at random, based on the weights"""
